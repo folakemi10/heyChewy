@@ -1,6 +1,7 @@
-import React from 'react'
+// import { StatusBar } from 'expo-status-bar';
+//import React from 'react'
 import {View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
-import Logo from '../../assets/heychewy1.png'
+import Logo from './assets/heychewy1.png'
 
 const Username = () => {
     const [text, onChangeText] = React.useState(null);
@@ -43,25 +44,27 @@ const Register = () => {
         <TouchableHighlight
         style={styles.register}
         onPress={() => this.submitSuggestion(this.props)}
-        underlayColor='#fff'>
+        underlayColor='#B9D7EF'>
         <Text style={[styles.registerButton]}>Register</Text>
         </TouchableHighlight>       
     )
 };
 
-const CreateAccount = ()=> {
+export function CreateAccount () {
     return (
         <View style={styles.header}> 
         <Image source={Logo} style={styles.logo} paddingBottom />
         <Text style={styles.message}> Thanks for joining our  {'\n'} PAW-some community!  </Text>
         <Username/>
         <Password/>
-        <ConfirmPassword/>
-        <TouchableHighlight/>
+        <ConfirmPassword/> 
+        <Register/>
         </View>
     );
 
 };
+
+export default CreateAccount;
 
 const styles = StyleSheet.create({
     container: {
@@ -124,4 +127,3 @@ const styles = StyleSheet.create({
       }
    });
 
-  export default CreateAccount;
