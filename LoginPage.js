@@ -4,6 +4,7 @@ import {
   Image,
   useWindowDimensions,
   Text,
+  SafeAreaView
 } from "react-native";
 import { withSafeAreaInsets } from "react-native-safe-area-context";
 import Custominput from "./Custominput/Custominput";
@@ -29,7 +30,7 @@ export function LoginPage() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.header}> Hello and welcome to </Text>
       <Image
         source={require("./assets/heychewy1.png")}
@@ -50,7 +51,7 @@ export function LoginPage() {
         <CustomButton text="Register" onPress={onRegisterPress} />
         <CustomButton text="Sign In" onPress={onSignInPress} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -61,7 +62,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     alignItems: "center",
     justifyContent: "center",
-    marginVertical: 85,
   },
 
   logo: {
