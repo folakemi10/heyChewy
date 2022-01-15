@@ -38,7 +38,18 @@ const ConfirmPassword = () => {
 
 };
 
-const CreateAccount = ( )=> {
+const Register = () => {
+    return (
+        <TouchableHighlight
+        style={styles.register}
+        onPress={() => this.submitSuggestion(this.props)}
+        underlayColor='#fff'>
+        <Text style={[styles.registerButton]}>Register</Text>
+        </TouchableHighlight>       
+    )
+};
+
+const CreateAccount = ()=> {
     return (
         <View style={styles.header}> 
         <Image source={Logo} style={styles.logo} paddingBottom />
@@ -46,12 +57,7 @@ const CreateAccount = ( )=> {
         <Username/>
         <Password/>
         <ConfirmPassword/>
-        <TouchableHighlight
-        style={styles.register}
-        onPress={() => this.submitSuggestion(this.props)}
-        underlayColor='#fff'>
-        <Text style={[styles.registerButton]}>Register</Text>
-        </TouchableHighlight>
+        <TouchableHighlight/>
         </View>
     );
 
@@ -116,6 +122,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff',
       }
-  });
+   });
 
   export default CreateAccount;
