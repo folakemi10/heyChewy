@@ -42,7 +42,7 @@ const ConfirmPassword = () => {
 
 };
 
-const Register = () => {
+/*const Register = () => {
     const navigation = useNavigation();
 
     return (
@@ -53,20 +53,26 @@ const Register = () => {
         <Text style={[styles.registerButton]}>Register</Text>
         </TouchableHighlight>       
     )
-};
+}; */
 
 export function CreateAccount () {
+    const navigation = useNavigation();
     return (
         <View style={styles.header}> 
         <Image source={Logo} style={styles.logo} paddingBottom />
         <Text style={styles.message}> Thanks for joining our  {'\n'} PAW-some community!  </Text>
         <Username/>
         <Password/>
-        <ConfirmPassword/> 
-        <Register/>
+        <ConfirmPassword/>
+        <TouchableHighlight
+        style={styles.register}
+        onPress={() => navigation.navigate('HomeScreen')}
+        underlayColor='#fff'>
+        <Text style={(styles.registerButton)}>Register</Text>    
+        </TouchableHighlight>
         </View>
     );
-
+ 
 };
 
 const styles = StyleSheet.create({
@@ -130,3 +136,4 @@ const styles = StyleSheet.create({
       }
    });
 
+   export default CreateAccount;
