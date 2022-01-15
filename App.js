@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './HomeScreen';
 import { CreateAccount } from './CreateAccount';
+import { RemindersPage } from './RemindersPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +15,7 @@ export default function App() {
         <Stack.Navigator  screenOptions={{headerShown: false}}>
           <Stack.Screen name="CreateAccount" component={CreateAccount} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-
+          <Stack.Screen name="RemindersPage" component={RemindersPage} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -4,10 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from './style.js';
 import { SafeAreaView, withSafeAreaInsets } from 'react-native-safe-area-context';
-
+import { useNavigation } from '@react-navigation/native';
 
 
 export function HomeScreen() {
+    const navigation = useNavigation();
     return(
        <SafeAreaView style = {styles.container} >
 
@@ -19,7 +20,7 @@ export function HomeScreen() {
                 <TouchableOpacity title="my pets" style={styles.button}>
                     <Text style={styles.text}>{'my pets'}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity title="reminders" style={styles.button}>
+                <TouchableOpacity title="reminders" style={styles.button} onPress={() => navigation.navigate('RemindersPage')}>
                     <Text style={styles.text}>{'reminders'}</Text>
                 </TouchableOpacity>
             </View>
