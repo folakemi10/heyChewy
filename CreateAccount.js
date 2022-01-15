@@ -71,7 +71,7 @@ export function CreateAccount () {
         </TouchableHighlight>
         </View>
     );
-
+ //
 };
 
 const styles = StyleSheet.create({
