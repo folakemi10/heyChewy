@@ -1,7 +1,8 @@
-// import { StatusBar } from 'expo-status-bar';
-//import React from 'react'
+// // import { StatusBar } from 'expo-status-bar';
+// //import React from 'react'
 import {View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
 import Logo from './assets/heychewy1.png'
+import style from './style';
 
 const Username = () => {
     const [text, onChangeText] = React.useState(null);
@@ -39,32 +40,36 @@ const ConfirmPassword = () => {
 
 };
 
-const Register = () => {
-    return (
-        <TouchableHighlight
-        style={styles.register}
-        onPress={() => this.submitSuggestion(this.props)}
-        underlayColor='#B9D7EF'>
-        <Text style={[styles.registerButton]}>Register</Text>
-        </TouchableHighlight>       
-    )
-};
+// const Register = () => {
+//     return (
+//         <TouchableHighlight
+//         style={styles.register}
+//         onPress={() => this.submitSuggestion(this.props)}
+//         underlayColor='#B9D7EF'>
+//         <Text style={[styles.registerButton]}>Register</Text>
+//         </TouchableHighlight>       
+//     )
+// };
 
-export function CreateAccount () {
+const CreateAccount = () => {
     return (
         <View style={styles.header}> 
         <Image source={Logo} style={styles.logo} paddingBottom />
         <Text style={styles.message}> Thanks for joining our  {'\n'} PAW-some community!  </Text>
         <Username/>
         <Password/>
-        <ConfirmPassword/> 
-        <Register/>
+        <ConfirmPassword/>
+        <TouchableHighlight
+        style={style.register}
+        // onPress={( ) => }
+        underlayColor='#fff'>
+        <Text style={(styles.registerButton)}>Register</Text>    
+        </TouchableHighlight>
         </View>
     );
 
 };
 
-export default CreateAccount;
 
 const styles = StyleSheet.create({
     container: {
@@ -127,3 +132,4 @@ const styles = StyleSheet.create({
       }
    });
 
+   export default CreateAccount;
