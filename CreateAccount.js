@@ -1,7 +1,10 @@
 // import { StatusBar } from 'expo-status-bar';
-//import React from 'react'
+import React from 'react'
 import {View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
 import Logo from './assets/heychewy1.png'
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const Username = () => {
     const [text, onChangeText] = React.useState(null);
@@ -40,10 +43,12 @@ const ConfirmPassword = () => {
 };
 
 const Register = () => {
+    const navigation = useNavigation();
+
     return (
         <TouchableHighlight
         style={styles.register}
-        onPress={() => this.submitSuggestion(this.props)}
+        onPress={() => navigation.navigate('HomeScreen')}
         underlayColor='#B9D7EF'>
         <Text style={[styles.registerButton]}>Register</Text>
         </TouchableHighlight>       
@@ -63,8 +68,6 @@ export function CreateAccount () {
     );
 
 };
-
-export default CreateAccount;
 
 const styles = StyleSheet.create({
     container: {
