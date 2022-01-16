@@ -12,7 +12,7 @@ export function PetProfile() {
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.titleBar}>
                 <Ionicons name="ios-arrow-back" size={24} color="#fff" onPress={() => navigation.navigate('PetList')}></Ionicons>
-                <Ionicons name="create" size={24} color="#fff"></Ionicons>
+                <Ionicons name="create" size={24} color="#fff" onPress={() => navigation.navigate('EditProfile')}></Ionicons>
             </View>
 
             <View style={{ alignSelf: "center" }}>

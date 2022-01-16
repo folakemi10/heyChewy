@@ -9,7 +9,7 @@ import { PetProfile } from "./PetProfile";
 import PetList from "./PetList";
 import { MedicalHistory } from "./MedicalPage";
 import { PetNotes } from "./PetNotes";
-
+import  EditProfile  from "./EditProfile";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -36,6 +36,7 @@ export default function App() {
           component={SingleReminderPage}
         />
         <Stack.Screen name="PetProfile" component={PetProfile} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="PetList" component={PetList} />
         <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
         <Stack.Screen name="PetNotes" component={PetNotes} />
