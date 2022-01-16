@@ -1,9 +1,15 @@
 import { StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
-
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
 export function MedicalHistory() {
+    const navigation = useNavigation();
     return (
         <SafeAreaView style={Styles.container}>
+            <View style={Styles.titleBar}>
+                <Ionicons name="ios-arrow-back" size={24} color="#3153A4" onPress={() => navigation.navigate('PetProfile')}></Ionicons>
+
+            </View>
             <TouchableOpacity style={Styles.button}>
                 <Text style={Styles.text}>upload files</Text>
             </TouchableOpacity>

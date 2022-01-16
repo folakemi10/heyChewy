@@ -52,5 +52,11 @@ export default StyleSheet.create({
 
     },
 
+    titleBar: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 24,
+        marginHorizontal: 16
+    },
   });
   
