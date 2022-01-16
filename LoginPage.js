@@ -24,7 +24,6 @@ export function LoginPage() {
   };
   const onSignInPress = () => {
     // go to home page
-    console.warn("SignIn");
     navigation.navigate("HomeScreen");
   };
 
