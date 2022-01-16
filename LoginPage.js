@@ -4,7 +4,7 @@ import {
   Image,
   useWindowDimensions,
   Text,
-  SafeAreaView
+  SafeAreaView,
 } from "react-native";
 import { withSafeAreaInsets } from "react-native-safe-area-context";
 import Custominput from "./Custominput/Custominput";
@@ -17,15 +17,6 @@ export function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { height } = useWindowDimensions();
-
-  const onRegisterPress = () => {
-    // go to create account
-    navigation.navigate("CreateAccount");
-  };
-  const onSignInPress = () => {
-    // go to home page
-    navigation.navigate("HomeScreen");
-  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -46,8 +37,14 @@ export function LoginPage() {
         secureTextEntry={true}
       />
       <View style={{ flexDirection: "row" }}>
-        <CustomButton text="Register" onPress={onRegisterPress} />
-        <CustomButton text="Sign In" onPress={onSignInPress} />
+        <CustomButton
+          text="Register"
+          onPress={() => navigation.navigate("CreateAccount")}
+        />
+        <CustomButton
+          text="Sign In"
+          onPress={() => navigation.navigate("HomeScreen")}
+        />
       </View>
     </SafeAreaView>
   );
