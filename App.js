@@ -6,14 +6,24 @@ import { LoginPage } from "./LoginPage";
 import { RemindersPage } from "./RemindersPage";
 import { SingleReminderPage } from "./SingleReminderPage";
 import { PetProfile } from "./PetProfile";
+import PetList from "./PetList";
+import { MedicalHistory } from "./MedicalPage";
+import { PetNotes } from "./PetNotes";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
   // const [loaded] = useFonts({
   //   Montserrat: require('./assets/fonts/'),
   // });
+
+  let customFonts = {
+    "WorkSans-Bold": require("./assets/fonts/WorkSans-Bold.ttf"),
+    "WorkSans-Medium": require("./assets/fonts/WorkSans-Medium.ttf"),
+    "WorkSans-SemiBold": require("./assets/fonts/WorkSans-SemiBold.ttf"),
+    "WorkSans-Thin": require("./assets/fonts/WorkSans-Thin.ttf"),
+  };
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -21,8 +31,14 @@ export default function App() {
         <Stack.Screen name="CreateAccount" component={CreateAccount} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="RemindersPage" component={RemindersPage} />
-        <Stack.Screen name="SingleReminderPage" component={SingleReminderPage} />
+        <Stack.Screen
+          name="SingleReminderPage"
+          component={SingleReminderPage}
+        />
         <Stack.Screen name="PetProfile" component={PetProfile} />
+        <Stack.Screen name="PetList" component={PetList} />
+        <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
+        <Stack.Screen name="PetNotes" component={PetNotes} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,69 +1,117 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, TouchableOpacity, ImageBackground } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 export function PetProfile() {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={styles.titleBar}>
-                    <Ionicons name="ios-arrow-back" size={24} color="#fff" onPress={() => navigation.navigate('HomeScreen')}></Ionicons>
-                    <Ionicons name="create" size={24} color="#fff"></Ionicons>
-                </View>
+        <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={styles.titleBar}>
+                <Ionicons name="ios-arrow-back" size={24} color="#fff" onPress={() => navigation.navigate('PetList')}></Ionicons>
+                <Ionicons name="create" size={24} color="#fff"></Ionicons>
+            </View>
 
-                <View style={{ alignSelf: "center" }}>
-                    <View style={styles.profileImage}>
-                        <Image source={require("./assets/hazel.jpg")} style={styles.image} resizeMode="center"></Image>
+            <View style={{ alignSelf: "center" }}>
+                <View style={styles.profileImage}>
+                    <Image source={require("./assets/hazel.jpg")} style={styles.image} resizeMode="center"></Image>
+                </View>
+            </View>
+
+            <View style={styles.infoContainer}>
+                <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Evie</Text>
+                <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Chihuahua / Pomeranion</Text>
+            </View>
+
+
+
+            <Text style={[styles.subText, styles.recent]}>Pet status</Text>
+            <View style={{ alignItems: "center" }}>
+                <View style={styles.recentItem}>
+                    <View style={{ width: 250 }}>
+                        <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
+                        Gender : Female
+                        </Text>
                     </View>
                 </View>
 
-                <View style={styles.infoContainer}>
-                    <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Hazel</Text>
-                    <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Chihuahua / Pomeranion</Text>
+                <View style={styles.recentItem}>
+                    <View style={{ width: 250 }}>
+                        <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
+                            Age : 4 Months
+                        </Text>
+                    </View>
+                </View>
+
+                <View style={styles.recentItem}>
+                    <View style={{ width: 250 }}>
+                        <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
+                            Weight : 3 lbs.
+                        </Text>
+                    </View>
                 </View>
 
                 <View style={{ marginTop: 32, marginBottom: 32,  flex: 1, justifyContent: 'space-between' }} >
-                    {/* onPress={() => navigation.navigate('MedicalHistory')*/}
-                <TouchableOpacity title="medical history" style={styles.button}> 
-                    <Text style={styles.btext}>{' medical history '}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity title="notes" style={styles.button}> 
-                    <Text style={styles.btext}>{' notes'}</Text>
-                </TouchableOpacity>
+                {/* onPress={() => navigation.navigate('MedicalHistory')*/}
+            <TouchableOpacity onPress={() => navigation.navigate('MedicalHistory')} title="medical history" style={styles.button}> 
+                <Text style={styles.btext}>{' medical history '}</Text>
+            </TouchableOpacity>
+                
+            <TouchableOpacity title="notes" style={styles.button} onPress={() => navigation.navigate('PetNotes')}>
+                <Text style={styles.btext}>{' notes'}</Text>
+            </TouchableOpacity>
 
+            </View>
+            <View style={{alignItems: 'center'}}>
+          <TouchableOpacity onPress={() => this.bs.current.snapTo(0)}>
+            <View
+              style={{
+                height: 100,
+                width: 100,
+                borderRadius: 15,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <ImageBackground
+     
+                style={{height: 100, width: 100}}
+                imageStyle={{borderRadius: 15}}>
+                <View
+                  style={{
+                    flex: 10,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <Icon
+                    name="camera"
+                    size={35}
+                    color="#fff"
+                    style={{
+                      opacity: 0.7,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderWidth: 1,
+                      borderColor: '#fff',
+                      borderRadius: 10,
+                    }}
+                  />
                 </View>
-                <Text style={[styles.subText, styles.recent]}>Pet status</Text>
-                <View style={{ alignItems: "center" }}>
-                    <View style={styles.recentItem}>
-                        <View style={{ width: 250 }}>
-                            <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
-                            Gender : Female
-                            </Text>
-                        </View>
-                    </View>
 
-                    <View style={styles.recentItem}>
-                        <View style={{ width: 250 }}>
-                            <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
-                                Age : 4 Months
-                            </Text>
-                        </View>
-                    </View>
+              </ImageBackground>
+            </View>
+          </TouchableOpacity>
+            </View>
+            </View>
+        </ScrollView>
+    </SafeAreaView>
 
-                    <View style={styles.recentItem}>
-                        <View style={{ width: 250 }}>
-                            <Text style={[styles.text, { color: "#fff", fontWeight: "300" }]}>
-                                Weight : 3 lbs.
-                            </Text>
-                        </View>
-                    </View>
 
-                </View>
-            </ScrollView>
-        </SafeAreaView>
-    );
+
+
+);
 }
 
 const styles = StyleSheet.create({
@@ -75,7 +123,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "#fff", 
-        fontFamily: 'WorkSans-Medium'
+        // fontFamily: 'WorkSans-Medium'
 
     },
     btext: {
@@ -124,7 +172,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
-    active: {
+    camera: {
         backgroundColor: "#34FFB9",
         position: "absolute",
         bottom: 28,
@@ -183,14 +231,14 @@ const styles = StyleSheet.create({
         shadowOpacity: 1
     },
     recent: {
-        marginLeft: 78,
+        marginLeft: 130,
         marginTop: 32,
         marginBottom: 6,
-        fontSize: 10
+        fontSize: 15
     },
     recentItem: {
         flexDirection: "row",
-        alignItems: "flex-start",
+        alignItems: "center",
         marginBottom: 16
     },
     activityIndicator: {
@@ -203,14 +251,13 @@ const styles = StyleSheet.create({
         marginRight: 20
     },
 
-    button: {
-        alignItems: 'center',
-        width: 350,
-        height: 80,
-        borderRadius: 20,
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        marginBottom: 20,
-        
-    },
+  button: {
+    alignItems: "center",
+    width: 350,
+    height: 80,
+    borderRadius: 20,
+    backgroundColor: "white",
+    justifyContent: "center",
+    marginBottom: 20,
+  },
 });

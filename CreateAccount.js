@@ -1,8 +1,10 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import {Ionicons, View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
+import {Ionicons, View, Text, StyleSheet, Image,TextInput,TouchableHighlight, Pressable} from 'react-native'
+// import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import Logo from './assets/heychewy1.png'
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 
@@ -58,7 +60,13 @@ const ConfirmPassword = () => {
 export function CreateAccount () {
     const navigation = useNavigation();
     return (
+
         <View style={styles.header}> 
+        <View style={styles.titleBar}>
+            <Pressable style={styles.button} onPress={() => navigation.goBack()}>
+                <Text style={styles.text}>Return to Login</Text>
+            </Pressable>
+        </View>
         <Image source={Logo} style={styles.heyChewy1}/>
         <Text style={styles.message}> Thanks for joining our  {'\n'} PAW-some community!  </Text>
         <Username/>
@@ -71,6 +79,7 @@ export function CreateAccount () {
         <Text style={(styles.registerButton)}>Register</Text>    
         </TouchableHighlight>
         </View>
+
     );
  
 };
@@ -123,6 +132,13 @@ const styles = StyleSheet.create({
         height: 90,
         // paddingTop: 120,
         // paddingBottom: 50,
+    },
+
+    titleBar: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 24,
+        marginHorizontal: 16
     },
 
     register: {
