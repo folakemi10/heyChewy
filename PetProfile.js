@@ -250,14 +250,13 @@ const styles = StyleSheet.create({
         marginRight: 20
     },
 
-    button: {
-        alignItems: 'center',
-        width: 350,
-        height: 80,
-        borderRadius: 20,
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        marginBottom: 20,
-        
-    },
+  button: {
+    alignItems: "center",
+    width: 350,
+    height: 80,
+    borderRadius: 20,
+    backgroundColor: "white",
+    justifyContent: "center",
+    marginBottom: 20,
+  },
 });
