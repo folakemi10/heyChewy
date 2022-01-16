@@ -74,15 +74,15 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     text: {
-        fontFamily: "HelveticaNeue",
-        color: "#fff"
+        color: "#fff", 
+        fontFamily: 'WorkSans-Medium'
+
     },
     btext: {
         color: '#3153A4',
         fontSize: 40,
     },
     buttontext: {
-        fontFamily: "HelveticaNeue",
         color: "#3153A4",
         alignItems: 'center',
         justifyContent: 'center',

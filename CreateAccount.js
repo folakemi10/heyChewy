@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import {View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
+import {Ionicons, View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
 import Logo from './assets/heychewy1.png'
 import { useNavigation } from '@react-navigation/native';
 
@@ -74,6 +74,7 @@ export function CreateAccount () {
     );
  
 };
+
 
 const styles = StyleSheet.create({
     container: {
