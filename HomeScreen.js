@@ -8,8 +8,6 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import styles from "./style.js";
 import {
   SafeAreaView,
@@ -21,6 +19,7 @@ export function HomeScreen() {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
+      <View style={{ flex: 3, }}>
       <Image
         source={require("./assets/heychewy2.png")}
         style={styles.heyChewy2}
@@ -28,16 +27,15 @@ export function HomeScreen() {
       <Text style={{ color: "white", fontSize: 30, lineHeight: 100 }}>
         show me ...
       </Text>
-
-      <View style={{ flex: 1, justifyContent: "space-between" }}>
+      </View>
+      <View style={{ flex: 2, justifyContent: 'center'}}>
         <TouchableOpacity
           title="my pets"
           style={styles.button}
           onPress={() => navigation.navigate("PetList")}
         >
-          <Text style={styles.text}>{"my pets"}</Text>
+          <Text style={styles.text}>{"my companions"}</Text>
         </TouchableOpacity>
-        <View style={{ flex: 2 }}></View>
         <TouchableOpacity
           title="reminders"
           style={styles.button}
@@ -45,11 +43,8 @@ export function HomeScreen() {
         >
           <Text style={styles.text}>{"reminders"}</Text>
         </TouchableOpacity>
-      </View>
-
-      <View style={{ flex: 1, alignItems: "center" }}>
-        <Text style={{ color: "white", fontSize: 35, lineHeight: 200 }}>
-          browse pets
+        <Text style={{ color: "white", fontSize: 35, lineHeight: 50 }}>
+          browse companions
         </Text>
       </View>
 

@@ -15,8 +15,7 @@ const PetList = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView styles={styles.container}>
-      <ScrollView>
-        <View style={styles.titleBar}>
+      <View style={styles.titleBar}>
           <Ionicons
             name="ios-arrow-back"
             size={24}
@@ -26,6 +25,8 @@ const PetList = () => {
           <Ionicons name="create" size={24} color="#3153A4"></Ionicons>
         </View>
         <Text style={styles.header}> my companions </Text>
+        <ScrollView style={styles.scontainer}>
+        
         <TouchableOpacity
           style={styles.pets}
           onPress={() => navigation.navigate("PetProfile")}
@@ -52,6 +53,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     alignItems: "center",
     justifyContent: "center",
+  },
+  scontainer: {
+    marginHorizontal: 60,
   },
   petContainer: {
     flexGrow: 1,
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
     width: 300,
     resizeMode: "contain",
     padding: 30,
-    borderRadius: 80,
+    borderRadius: 20,
   },
 
   names: {
@@ -89,6 +93,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     fontSize: 20,
     fontWeight: "bold",
+    alignSelf: "flex-start",
+    top: 300,
+    left: 10,
   },
 
   titleBar: {
