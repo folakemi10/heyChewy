@@ -3,22 +3,25 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 const Days = [
-    { id: "1", title: "Walk Bella"},
-    { id: "2", title: "Clean litter box"},
-    { id: "3", title: "Feed fish"},
+    { id: "1", day: "1", title: "Walk Bella"},
+    { id: "2", day: "2", title: "Clean litter box"},
+    { id: "3", day: "3", title: "Feed fish"},
+    { id: "4", day: "2", title: "Change Noodles waterbowl"}
   ];
 
 export function SingleReminderPage({route, navigation}){
-    const {day} = route.params;
+    const {dayID, day} = route.params;
 
-    const renderReminder = ({ item }) => {     
-        return (
-        <View style={{padding:10}}>
-            <View style={styles.dailyReminder}>
-                <Text style={ {color: '#3153A4', flexWrap: 'wrap', fontSize: 20} } >{item.title}</Text>
+    const renderReminder = ({ item }) => {  
+        if (dayID == item.day){   
+            return (
+            <View style={{padding:10}}>
+                <View style={styles.dailyReminder}>
+                    <Text style={ {color: '#3153A4', flexWrap: 'wrap', fontSize: 20} } >{item.title}</Text>
+                </View>
             </View>
-        </View>
-        );
+            );
+        }
     };
 
     return(

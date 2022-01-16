@@ -20,7 +20,7 @@ export function DailyReminders(){
     const renderDay = ({ item }) => {
         
         return (
-        <Pressable style={{padding:10}} onPress={() => navigation.navigate('SingleReminderPage', {day: item.title})}>
+        <Pressable style={{padding:10}} onPress={() => navigation.navigate('SingleReminderPage', {dayID: item.id, day: item.title})}>
             <View style={styles.dailyReminders}>
                 <Text style={styles.text}>{item.title}</Text>
             </View>
