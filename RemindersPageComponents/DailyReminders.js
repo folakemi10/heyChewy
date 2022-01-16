@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, Pressable, FlatList, SafeAreaView, StatusBar } from "react-native";
 import React, { useState } from "react";
+import { SingleReminderPage } from "../SingleReminderPage";
+import { useNavigation } from "@react-navigation/native";
 
   const Days = [
     { id: "1", title: "monday"},
@@ -13,12 +15,12 @@ import React, { useState } from "react";
 
 export function DailyReminders(){
     const [selectedId, setSelectedId] = useState(null);
-
+    const navigation = useNavigation();
     
     const renderDay = ({ item }) => {
         
         return (
-        <Pressable style={{padding:10}} onPress={() => setSelectedId(item.id)}>
+        <Pressable style={{padding:10}} onPress={() => navigation.navigate('SingleReminderPage', {day: item.title})}>
             <View style={styles.dailyReminders}>
                 <Text style={styles.text}>{item.title}</Text>
             </View>

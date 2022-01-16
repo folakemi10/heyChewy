@@ -4,6 +4,7 @@ import { HomeScreen } from "./HomeScreen";
 import { CreateAccount } from "./CreateAccount";
 import { LoginPage } from "./LoginPage";
 import { RemindersPage } from "./RemindersPage";
+import { SingleReminderPage } from "./SingleReminderPage";
 import { PetProfile } from "./PetProfile";
 
 const Stack = createNativeStackNavigator();
@@ -28,6 +29,7 @@ export default function App() {
         <Stack.Screen name="CreateAccount" component={CreateAccount} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="RemindersPage" component={RemindersPage} />
+        <Stack.Screen name="SingleReminderPage" component={SingleReminderPage} />
         <Stack.Screen name="PetProfile" component={PetProfile} />
       </Stack.Navigator>
     </NavigationContainer>
