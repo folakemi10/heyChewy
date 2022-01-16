@@ -6,12 +6,9 @@ import { LoginPage } from "./LoginPage";
 import { RemindersPage } from "./RemindersPage";
 import { SingleReminderPage } from "./SingleReminderPage";
 import { PetProfile } from "./PetProfile";
-<<<<<<< Updated upstream
 import PetList from "./PetList";
 import { MedicalHistory } from "./MedicalPage";
-=======
 import { PetNotes } from "./PetNotes";
->>>>>>> Stashed changes
 
 const Stack = createNativeStackNavigator();
 
@@ -39,12 +36,9 @@ export default function App() {
           component={SingleReminderPage}
         />
         <Stack.Screen name="PetProfile" component={PetProfile} />
-<<<<<<< Updated upstream
         <Stack.Screen name="PetList" component={PetList} />
         <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
-=======
         <Stack.Screen name="PetNotes" component={PetNotes} />
->>>>>>> Stashed changes
       </Stack.Navigator>
     </NavigationContainer>
   );

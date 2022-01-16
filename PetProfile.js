@@ -55,24 +55,14 @@ export function PetProfile() {
                 </View>
 
                 <View style={{ marginTop: 32, marginBottom: 32,  flex: 1, justifyContent: 'space-between' }} >
-<<<<<<< Updated upstream
                 {/* onPress={() => navigation.navigate('MedicalHistory')*/}
             <TouchableOpacity onPress={() => navigation.navigate('MedicalHistory')} title="medical history" style={styles.button}> 
                 <Text style={styles.btext}>{' medical history '}</Text>
             </TouchableOpacity>
-            <TouchableOpacity title="notes" style={styles.button}> 
+                
+            <TouchableOpacity title="notes" style={styles.button} onPress={() => navigation.navigate('PetNotes')}>
                 <Text style={styles.btext}>{' notes'}</Text>
             </TouchableOpacity>
-=======
-                    {/* onPress={() => navigation.navigate('MedicalHistory')*/}
-                <TouchableOpacity title="medical history" style={styles.button}> 
-                    <Text style={styles.btext}>{' medical history '}</Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity title="notes" style={styles.button} onPress={() => navigation.navigate('PetNotes')}>
-                    <Text style={styles.btext}>{' notes'}</Text>
-                </TouchableOpacity>
->>>>>>> Stashed changes
 
             </View>
             <View style={{alignItems: 'center'}}>
