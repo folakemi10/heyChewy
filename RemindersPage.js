@@ -2,23 +2,22 @@ import { StyleSheet, View, Pressable, Text } from "react-native";
 import { UpComingReminders } from "./RemindersPageComponents/UpComingReminders";
 import { DailyReminders } from "./RemindersPageComponents/DailyReminders";
 import { useNavigation } from "@react-navigation/native";
-
+import { Ionicons } from "@expo/vector-icons";
 
 export function RemindersPage(){
     const navigation = useNavigation();
     return(
         <View style={styles.container}>
-            <View style={{flexDirection: 'row'}}>
-                <Pressable style={styles.button} onPress={() => navigation.goBack()}>
-                    <Text style={styles.text}>Back</Text>
-                </Pressable>
+            <View style={styles.titleBar}>
+                    <Ionicons name="ios-arrow-back" size={24} color="#3153A4" onPress={() => navigation.navigate('HomeScreen')}></Ionicons>
             </View>
+
+            
             <UpComingReminders/>
             <DailyReminders/>
         </View>
     );
 }
-
 
 const styles = StyleSheet.create({
     button: {
@@ -35,5 +34,11 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         padding: 30
+    },
+    titleBar: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 24,
+        marginHorizontal: 16
     },
 })
