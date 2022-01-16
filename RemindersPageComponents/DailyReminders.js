@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Pressable, FlatList, SafeAreaView, StatusBar } from "react-native";
 import React, { useState } from "react";
-import style from "../style";
 
   const Days = [
     { id: "1", title: "monday"},
@@ -30,7 +29,7 @@ export function DailyReminders(){
     return(
         
         <View style={styles.container2}>
-            <Text style={styles.text}>Daily Reminders</Text>
+            <Text style={styles.text}>Weekly Reminders</Text>
             <SafeAreaView>
                     <FlatList
                     data={Days}

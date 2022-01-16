@@ -20,12 +20,10 @@ export function LoginPage() {
 
   const onRegisterPress = () => {
     // go to create account
-    console.warn("Register");
     navigation.navigate("CreateAccount");
   };
   const onSignInPress = () => {
     // go to home page
-    console.warn("SignIn");
     navigation.navigate("HomeScreen");
   };
 

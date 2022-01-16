@@ -17,7 +17,7 @@ export function HomeScreen() {
             
             <View style={{ flex: 1, justifyContent: 'space-between',}}>
 
-                <TouchableOpacity title="my pets" style={styles.button}>
+                <TouchableOpacity title="my pets" style={styles.button} onPress={() => navigation.navigate('PetProfile')}>
                     <Text style={styles.text}>{'my pets'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity title="reminders" style={styles.button} onPress={() => navigation.navigate('RemindersPage')}>
