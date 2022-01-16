@@ -15,7 +15,7 @@ export function SingleReminderPage({route, navigation}){
         return (
         <View style={{padding:10}}>
             <View style={styles.dailyReminder}>
-                <Text style={ {color: '#3153A4', flexWrap: 'wrap'} } >{item.title}</Text>
+                <Text style={ {color: '#3153A4', flexWrap: 'wrap', fontSize: 20} } >{item.title}</Text>
             </View>
         </View>
         );

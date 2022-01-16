@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Pressable, TouchableOpacity, FlatList, SafeAreaView, StatusBar } from "react-native";
 import React, { useState } from "react";
+import { Ionicons } from "@expo/vector-icons";
 
 const DATA = [
     {
@@ -52,7 +53,12 @@ export function UpComingReminders(){
     return(
         
         <View style={styles.upComingReminders}>
-            <Text style={styles.text}>Upcoming Reminders</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Text style={styles.text}>Upcoming Reminders</Text>
+              <View style={styles.icon}>
+                    <Ionicons name="create" size={20} color="#fff"></Ionicons>
+              </View>
+            </View>
             <SafeAreaView style={{borderRadius: 20, flex: 1}}>
                 <FlatList
                 data={DATA}
@@ -84,5 +90,10 @@ const styles = StyleSheet.create({
       borderRadius: 20,
       backgroundColor: "#B9D7EF",
       flexDirection: 'row',
+  },
+  icon:{
+    flex: 1, 
+    flexDirection: 'row', 
+    justifyContent: 'flex-end',
   },
 })
