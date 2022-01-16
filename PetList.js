@@ -22,6 +22,7 @@ const PetList = () => {
             color="#3153A4"
             onPress={() => navigation.navigate("HomeScreen")}
           ></Ionicons>
+          <Ionicons name="add" size={24} color="#3153A4"></Ionicons>
         </View>
         <Text style={styles.header}> my companions </Text>
         <ScrollView style={styles.scontainer}>
