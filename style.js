@@ -10,21 +10,17 @@ export default StyleSheet.create({
         justifyContent: "space-between",
     },
     scontainer: {
-        flexGrow: .5,
-        justifyContent: "space-between",
-        //padding: 10,
+        flexGrow: 1,
       
 
     },
     text: {
-        top: '60',
         color: '#3153A4',
         fontSize: 36,
-        position: 'absolute',
+        //position: 'relative',
         fontWeight: 'bold',
     },
     heyChewy2: {
-        //flex: 1,
         height: 200,
         width: 200,
         resizeMode: 'contain',
@@ -37,12 +33,13 @@ export default StyleSheet.create({
         borderRadius: 100,
     },
     button: {
-        alignItems: 'center',
         width: 300,
         height: 73,
         borderRadius: 15,
         backgroundColor: 'white',
         marginBottom: 40,
+        alignItems: "center",
+        justifyContent: "center",
         
     },
     sbutton: {
@@ -50,7 +47,6 @@ export default StyleSheet.create({
         width: 200,
         height: 200,
         justifyContent: 'center',
-        padding: 1,
         borderRadius: 100,
        
 

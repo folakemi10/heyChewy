@@ -56,7 +56,7 @@ export function PetProfile() {
 
                 <View style={{ marginTop: 32, marginBottom: 32,  flex: 1, justifyContent: 'space-between' }} >
                 {/* onPress={() => navigation.navigate('MedicalHistory')*/}
-            <TouchableOpacity title="medical history" style={styles.button}> 
+            <TouchableOpacity onPress={() => navigation.navigate('MedicalHistory')} title="medical history" style={styles.button}> 
                 <Text style={styles.btext}>{' medical history '}</Text>
             </TouchableOpacity>
             <TouchableOpacity title="notes" style={styles.button}> 

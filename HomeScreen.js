@@ -24,7 +24,7 @@ export function HomeScreen() {
         source={require("./assets/heychewy2.png")}
         style={styles.heyChewy2}
       />
-      <Text style={{ color: "white", fontSize: 30, lineHeight: 100 }}>
+      <Text style={{ alignSelf: 'center', color: "white", fontSize: 30, lineHeight: 30 }}>
         show me ...
       </Text>
       </View>

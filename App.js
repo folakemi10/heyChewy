@@ -7,6 +7,7 @@ import { RemindersPage } from "./RemindersPage";
 import { SingleReminderPage } from "./SingleReminderPage";
 import { PetProfile } from "./PetProfile";
 import PetList from "./PetList";
+import { MedicalHistory } from "./MedicalPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,7 @@ export default function App() {
         />
         <Stack.Screen name="PetProfile" component={PetProfile} />
         <Stack.Screen name="PetList" component={PetList} />
+        <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
       </Stack.Navigator>
     </NavigationContainer>
   );
