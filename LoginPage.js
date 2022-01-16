@@ -20,7 +20,6 @@ export function LoginPage() {
 
   const onRegisterPress = () => {
     // go to create account
-    console.warn("Register");
     navigation.navigate("CreateAccount");
   };
   const onSignInPress = () => {
