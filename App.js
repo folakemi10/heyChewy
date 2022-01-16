@@ -9,6 +9,10 @@ import { PetProfile } from "./PetProfile";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
+  // const [loaded] = useFonts({
+  //   Montserrat: require('./assets/fonts/'),
+  // });
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
