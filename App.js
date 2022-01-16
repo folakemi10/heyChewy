@@ -13,6 +13,14 @@ export default function App() {
   // const [loaded] = useFonts({
   //   Montserrat: require('./assets/fonts/'),
   // });
+
+  let customFonts = {
+    'WorkSans-Bold': require('./assets/fonts/WorkSans-Bold.ttf'),
+    'WorkSans-Medium': require('./assets/fonts/WorkSans-Medium.ttf'),
+    'WorkSans-SemiBold': require('./assets/fonts/WorkSans-SemiBold.ttf'),
+    'WorkSans-Thin': require('./assets/fonts/WorkSans-Thin.ttf'),
+  };
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>

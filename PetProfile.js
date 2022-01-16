@@ -24,16 +24,6 @@ export function PetProfile() {
                     <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Chihuahua / Pomeranion</Text>
                 </View>
 
-                <View style={{ marginTop: 32, marginBottom: 32,  flex: 1, justifyContent: 'space-between' }} >
-                    {/* onPress={() => navigation.navigate('MedicalHistory')*/}
-                <TouchableOpacity title="medical history" style={styles.button}> 
-                    <Text style={styles.btext}>{' medical history '}</Text>
-                </TouchableOpacity>
-                <TouchableOpacity title="notes" style={styles.button}> 
-                    <Text style={styles.btext}>{' notes'}</Text>
-                </TouchableOpacity>
-
-                </View>
                 <Text style={[styles.subText, styles.recent]}>Pet status</Text>
                 <View style={{ alignItems: "center" }}>
                     <View style={styles.recentItem}>
@@ -60,6 +50,17 @@ export function PetProfile() {
                         </View>
                     </View>
 
+                    <View style={{ marginTop: 32, marginBottom: 32,  flex: 1, justifyContent: 'space-between' }} >
+                    {/* onPress={() => navigation.navigate('MedicalHistory')*/}
+                <TouchableOpacity title="medical history" style={styles.button}> 
+                    <Text style={styles.btext}>{' medical history '}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity title="notes" style={styles.button}> 
+                    <Text style={styles.btext}>{' notes'}</Text>
+                </TouchableOpacity>
+
+                </View>
+                
                 </View>
             </ScrollView>
         </SafeAreaView>
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "#fff", 
-        fontFamily: 'WorkSans-Medium'
+        // fontFamily: 'WorkSans-Medium'
 
     },
     btext: {
@@ -183,7 +184,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 1
     },
     recent: {
-        marginLeft: 78,
+        marginLeft: 70,
         marginTop: 32,
         marginBottom: 6,
         fontSize: 10
