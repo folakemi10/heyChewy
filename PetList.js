@@ -42,6 +42,14 @@ const PetList = () => {
           <Image source={require("./assets/cat.png")} style={styles.portrait} />
           <Text style={styles.names}> Yuki </Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.pets}
+          onPress={() => navigation.navigate("PetProfile")}
+        >
+          <Image source={require("./assets/evie.png")} style={styles.portrait} />
+          <Text style={styles.names}> Evie </Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );

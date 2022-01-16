@@ -11,7 +11,7 @@ export function PetProfile() {
         <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.titleBar}>
-                <Ionicons name="ios-arrow-back" size={24} color="#fff" onPress={() => navigation.navigate('HomeScreen')}></Ionicons>
+                <Ionicons name="ios-arrow-back" size={24} color="#fff" onPress={() => navigation.navigate('PetList')}></Ionicons>
                 <Ionicons name="create" size={24} color="#fff"></Ionicons>
             </View>
 
@@ -22,7 +22,7 @@ export function PetProfile() {
             </View>
 
             <View style={styles.infoContainer}>
-                <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Hazel</Text>
+                <Text style={[styles.text, { fontWeight: "200", fontSize: 36 }]}>Evie</Text>
                 <Text style={[styles.text, { color: "#AEB5BC", fontSize: 14 }]}>Chihuahua / Pomeranion</Text>
             </View>
 
