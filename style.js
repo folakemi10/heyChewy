@@ -39,6 +39,7 @@ export default StyleSheet.create({
         height: 80,
         borderRadius: 20,
         backgroundColor: 'white',
+        marginBottom: 20,
         
     },
     sbutton: {

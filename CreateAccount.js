@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import {View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
+import {Ionicons, View, Text, StyleSheet, Image,TextInput,TouchableHighlight} from 'react-native'
 import Logo from './assets/heychewy1.png'
 import { useNavigation } from '@react-navigation/native';
 
@@ -59,7 +59,7 @@ export function CreateAccount () {
     const navigation = useNavigation();
     return (
         <View style={styles.header}> 
-        <Image source={Logo} style={styles.logo} paddingBottom />
+        <Image source={Logo} style={styles.heyChewy1}/>
         <Text style={styles.message}> Thanks for joining our  {'\n'} PAW-some community!  </Text>
         <Username/>
         <Password/>
@@ -75,10 +75,14 @@ export function CreateAccount () {
  
 };
 
+
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#009387'
+      backgroundColor: '#009387',
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: 80
     },
 
     header: {
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 30,
         paddingHorizontal: 10,
-        paddingBottom: 50
+        paddingBottom: 120
     },
 
     message: {
@@ -117,8 +121,8 @@ const styles = StyleSheet.create({
     logo: {
         width: 99,
         height: 90,
-        paddingTop: 80,
-        paddingBottom: 50,
+        // paddingTop: 120,
+        // paddingBottom: 50,
     },
 
     register: {
@@ -133,7 +137,15 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         borderColor: '#fff',
-      }
+      },
+
+      heyChewy1: {
+        flex: 1,
+        height: 200,
+        width: 200,
+        resizeMode: 'contain',
+
+    },
    });
 
    export default CreateAccount;
