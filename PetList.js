@@ -16,17 +16,17 @@ const PetList = () => {
   return (
     <SafeAreaView styles={styles.container}>
       <View style={styles.titleBar}>
-          <Ionicons
-            name="ios-arrow-back"
-            size={24}
-            color="#3153A4"
-            onPress={() => navigation.navigate("HomeScreen")}
-          ></Ionicons>
-          <Ionicons name="add" size={24} color="#3153A4"></Ionicons>
-        </View>
-        <Text style={styles.header}> my companions </Text>
-        <ScrollView style={styles.scontainer}>
-        
+        <Ionicons
+          name="ios-arrow-back"
+          size={24}
+          color="#3153A4"
+          onPress={() => navigation.navigate("HomeScreen")}
+        ></Ionicons>
+      </View>
+
+      <Text style={styles.header}> my companions </Text>
+
+      <ScrollView style={styles.scontainer}>
         <TouchableOpacity
           style={styles.pets}
           onPress={() => navigation.navigate("PetProfile")}
@@ -47,7 +47,10 @@ const PetList = () => {
           style={styles.pets}
           onPress={() => navigation.navigate("PetProfile")}
         >
-          <Image source={require("./assets/evie.png")} style={styles.portrait} />
+          <Image
+            source={require("./assets/evie.png")}
+            style={styles.portrait}
+          />
           <Text style={styles.names}> Evie </Text>
         </TouchableOpacity>
       </ScrollView>
