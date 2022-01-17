@@ -31,8 +31,11 @@ const PetList = () => {
           style={styles.pets}
           onPress={() => navigation.navigate("PetProfile")}
         >
-          <Image source={require("./assets/dog.png")} style={styles.portrait} />
-          <Text style={styles.names}> Bella </Text>
+          <Image
+            source={require("./assets/evie.png")}
+            style={styles.portrait}
+          />
+          <Text style={styles.names}> Evie </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -48,10 +51,18 @@ const PetList = () => {
           onPress={() => navigation.navigate("PetProfile")}
         >
           <Image
-            source={require("./assets/evie.png")}
+            source={require("./assets/bunny.png")}
             style={styles.portrait}
           />
-          <Text style={styles.names}> Evie </Text>
+          <Text style={styles.names}> Mr. Carrot </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.pets}
+          onPress={() => navigation.navigate("PetProfile")}
+        >
+          <Image source={require("./assets/dog.png")} style={styles.portrait} />
+          <Text style={styles.names}> Bella </Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
@@ -66,7 +77,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   scontainer: {
-    marginHorizontal: 60,
+    marginHorizontal: 0,
   },
   petContainer: {
     flexGrow: 1,
@@ -78,9 +89,9 @@ const styles = StyleSheet.create({
   header: {
     color: "#3153A4",
     fontWeight: "bold",
-    fontSize: 40,
+    fontSize: 34,
     textAlign: "center",
-    padding: 20,
+    padding: 10,
   },
 
   pets: {
@@ -95,7 +106,7 @@ const styles = StyleSheet.create({
     width: 300,
     resizeMode: "contain",
     padding: 30,
-    borderRadius: 20,
+    borderRadius: 30,
   },
 
   names: {
@@ -105,15 +116,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     alignSelf: "flex-start",
-    top: 300,
-    left: 10,
+    top: 290,
+    left: 70,
+    color: "#FFFFFF",
+    shadowOpacity: 30,
   },
 
   titleBar: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 24,
-    marginHorizontal: 16,
+    marginHorizontal: 56,
   },
 });
 
